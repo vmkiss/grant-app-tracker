@@ -23,7 +23,7 @@ db.once("open", (err) => {
 const grantSchema = mongoose.Schema({
     foundation: { type: String, required: true },
     notes: { type: String, required: true },
-    date: { type: Date, required: true },
+    date: { type: String, required: true },
     ask: { type: String, required: true },
     award: { type: String, required: true },
     currStatus: { type: String, required: true }
@@ -45,7 +45,7 @@ const createGrant = async (foundation, notes, date, ask, award, currStatus) => {
     return grant.save();
 }
 
-// Retrieve model
+// Retrieve models
 
 // Retrieve all grants
 const retrieveGrants = async () => {
@@ -60,7 +60,7 @@ const retrieveGrantByID = async (_id) => {
 }
 
 // Delete model by id
-const deleteGrantById = async (_id) => {
+const deleteGrantByID = async (_id) => {
     const result = await grants.deleteOne({_id: _id});
     return result.deletedCount;
 };
@@ -86,7 +86,7 @@ const updateGrant = async (_id, foundation, notes, date, ask, award, currStatus)
     }
 }
 
-export { createGrant, retrieveGrants, retrieveGrantByID, updateGrant, deleteGrantById }
+export { createGrant, retrieveGrants, retrieveGrantByID, updateGrant, deleteGrantByID }
 
 
 
