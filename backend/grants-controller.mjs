@@ -27,3 +27,19 @@ app.post ('./grants', (req, res) => {
         res.status(400).json({ Error: 'Grant could not be added to collection'});
     });
 })
+
+// Retrieve grant controller
+app.get('./grants', (req, res) => {
+    grants.retrieveGrants()
+        .then(grants => {
+            if (grants !== null) {
+                console.log('All grants successfully retrieved')
+            } else {
+                res.status(404).json({ Error: 'No grants found' });
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(400).json({ Error: 'Grants could not be retrieved' });
+        });
+});
