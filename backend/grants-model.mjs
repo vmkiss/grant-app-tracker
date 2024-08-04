@@ -6,7 +6,7 @@ import 'dotenv/config';
 // Establish database connection
 mongoose.connect(
     process.env.MONGODB_CONNECT_STRING,
-    { useNewUrlParser: true}
+    { useNewUrlParser: true }
 );
 const db = mongoose.connection;
 

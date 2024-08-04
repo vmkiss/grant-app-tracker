@@ -1,0 +1,16 @@
+### CREATE GRANT
+POST http://localhost:3000/grants HTTP/1.1
+content-type: application/json
+
+{
+    "foundation": "Autzen Foundation",
+    "notes": "focuses on youth development and education",
+    "date": "09-03-24",
+    "ask": "$3,000",
+    "award": "$0",
+    "currStatus": "pending"
+}
+
+### RETRIEVE ALL GRANTS 
+GET http://localhost:3000/grants HTTP/1.1
+
