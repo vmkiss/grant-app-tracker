@@ -29,4 +29,7 @@ content-type: application/json
     "ask": "$3,000",
     "award": "$2,500",
     "currStatus": "awarded"
-    }
+}
+
+### DELETE GRANT
+DELETE http://localhost:3000/grants/66b0048704cd2e9e7c719e8c
