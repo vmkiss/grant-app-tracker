@@ -5,7 +5,7 @@ import express from 'express';
 import * as grants from './grants-model.mjs';
 
 const PORT = process.env.PORT;
-const app = expres();
+const app = express();
 app.use(express.json());
 
 // Create grant controller
