@@ -59,4 +59,12 @@ const retrieveGrantByID = async (_id) => {
     return query.exec();
 }
 
+// Delete model by id
+const deleteGrantById = async (_id) => {
+    const result = await grants.deleteOne({_id: _id});
+    return result.deletedCount;
+};
+
+
+
 
