@@ -86,6 +86,8 @@ const updateGrant = async (_id, foundation, notes, date, ask, award, currStatus)
     }
 }
 
+export { createGrant, retrieveGrants, retrieveGrantByID, updateGrant, deleteGrantById }
+
 
 
 
