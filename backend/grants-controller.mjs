@@ -81,3 +81,24 @@ app.put('./grants/:_id', (req, res) => {
             res.status(400).json({ Error: 'Grant could not be updated' });
         });
 });
+
+// Delete grant controller
+app.delete('/grants/:_id', (req, res) => {
+    grants.deleteGrantById(req.params._id)
+        .then(deletedCount => {
+            if (deletedCount === 1) {
+                console.log(`Based on its ID, ${deletedCount} grant was deleted.`);
+                res.status(200).send({ Success: `${deletedCount} grant was deleted based on its ID` });
+            } else {
+                res.status(404).json({ Error: 'Grant could not be deleted' })
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            res.send({ Error: 'Grant could not be deleted based on ID' });
+        });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}...`);
+});
