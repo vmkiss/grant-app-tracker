@@ -55,7 +55,7 @@ const retrieveGrants = async () => {
 
 // Retrieve grant by id
 const retrieveGrantByID = async (_id) => {
-    const query = moives.findById({_id: _id});
+    const query = grants.findById({_id: _id});
     return query.exec();
 }
 
