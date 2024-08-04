@@ -21,11 +21,27 @@ db.once("open", (err) => {
 
 // Define grant collection's schema
 const grantSchema = mongoose.Schema({
-    name: { type: String, required: true },
+    foundation: { type: String, required: true },
     notes: { type: String, required: true },
-    dateDue: { type: Date, required: true },
+    date: { type: Date, required: true },
     ask: { type: String, required: true },
     award: { type: String, required: true },
     status: { type: String, required: true }
 });
+
+// Define Grants model and compile from schema
+const grants = mongoose.model('Grants', grantSchema);
+
+// Create model
+const createGrant = async (foundation, notes, date, ask, award, status) => {
+    const grant = new grants({
+        foundation: foundation,
+        notes: notes,
+        date: date,
+        ask: ask,
+        award: award,
+        status: status
+    });
+    return grant.save();
+}
 
