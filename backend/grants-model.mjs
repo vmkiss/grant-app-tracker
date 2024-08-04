@@ -26,21 +26,21 @@ const grantSchema = mongoose.Schema({
     date: { type: Date, required: true },
     ask: { type: String, required: true },
     award: { type: String, required: true },
-    status: { type: String, required: true }
+    currStatus: { type: String, required: true }
 });
 
 // Define Grants model and compile from schema
 const grants = mongoose.model('Grants', grantSchema);
 
 // Create model
-const createGrant = async (foundation, notes, date, ask, award, status) => {
+const createGrant = async (foundation, notes, date, ask, award, currStatus) => {
     const grant = new grants({
         foundation: foundation,
         notes: notes,
         date: date,
         ask: ask,
         award: award,
-        status: status
+        currStatus: currStatus
     });
     return grant.save();
 }
@@ -64,6 +64,29 @@ const deleteGrantById = async (_id) => {
     const result = await grants.deleteOne({_id: _id});
     return result.deletedCount;
 };
+
+// Edit model
+const updateGrant = async (_id, foundation, notes, date, ask, award, currStatus) => {
+    const result = await grants.replaceOne({_id: _id}, {
+        foundation: foundation,
+        notes: notes,
+        date: date,
+        ask: ask,
+        award: award,
+        currStatus: currStatus
+    });
+    return {
+        _id: _id,
+        foundation: foundation,
+        notes: notes,
+        date: date,
+        ask: ask,
+        award: award,
+        currStatus: currStatus
+    }
+}
+
+
 
 
 
