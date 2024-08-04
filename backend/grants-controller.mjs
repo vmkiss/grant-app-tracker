@@ -84,7 +84,7 @@ app.put('/grants/:_id', (req, res) => {
 
 // Delete grant controller
 app.delete('/grants/:_id', (req, res) => {
-    grants.deleteGrantById(req.params._id)
+    grants.deleteGrantByID(req.params._id)
         .then(deletedCount => {
             if (deletedCount === 1) {
                 console.log(`Based on its ID, ${deletedCount} grant was deleted.`);
