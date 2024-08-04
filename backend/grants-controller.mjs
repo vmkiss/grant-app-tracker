@@ -19,7 +19,7 @@ app.post ('./grants', (req, res) => {
         req.body.currStatus
     )
     .then(grant => {
-        console.log(`${grant.foundation} was added to the collection.`)
+        console.log(`${grant.foundation} grant was added to the collection.`)
         res.status(201).json(grant);
     })
     .catch(error => {
@@ -41,5 +41,22 @@ app.get('./grants', (req, res) => {
         .catch(error => {
             console.log(error);
             res.status(400).json({ Error: 'Grants could not be retrieved' });
+        });
+});
+
+// Retrieve grant controller by id
+app.get('./grants/:_id', (req, res) => {
+    grants.retrieveGrantByID(req.params._id)
+        .then(grant => {
+            if (grant != null) {
+                console.log(`${grant.foundation} grant was retrieve by its ID`)
+                res.json(grant);
+            } else {
+                res.status(404).json({ Error: 'No grants found'})
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(400).json({ Error: 'Grant could not be retrieved by its ID' });
         });
 });
