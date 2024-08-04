@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 // Create grant controller
-app.post ('./grants', (req, res) => {
+app.post ('/grants', (req, res) => {
     grants.createGrant(
         req.body.foundation,
         req.body.notes,
@@ -29,7 +29,7 @@ app.post ('./grants', (req, res) => {
 })
 
 // Retrieve grant controller
-app.get('./grants', (req, res) => {
+app.get('/grants', (req, res) => {
     grants.retrieveGrants()
         .then(grants => {
             if (grants !== null) {
@@ -45,7 +45,7 @@ app.get('./grants', (req, res) => {
 });
 
 // Retrieve grant controller by id
-app.get('./grants/:_id', (req, res) => {
+app.get('/grants/:_id', (req, res) => {
     grants.retrieveGrantByID(req.params._id)
         .then(grant => {
             if (grant != null) {
@@ -62,7 +62,7 @@ app.get('./grants/:_id', (req, res) => {
 });
 
 // Update grant controller
-app.put('./grants/:_id', (req, res) => {
+app.put('/grants/:_id', (req, res) => {
     grants.updateGrant(
         req.params._id,
         req.body.foundation,
