@@ -45,3 +45,18 @@ const createGrant = async (foundation, notes, date, ask, award, status) => {
     return grant.save();
 }
 
+// Retrieve model
+
+// Retrieve all grants
+const retrieveGrants = async () => {
+    const query = movies.find();
+    return query.exec();
+}
+
+// Retrieve grant by id
+const retrieveGrantByID = async (_id) => {
+    const query = moives.findById({_id: _id});
+    return query.exec();
+}
+
+
