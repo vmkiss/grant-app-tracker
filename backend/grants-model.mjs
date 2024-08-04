@@ -49,7 +49,7 @@ const createGrant = async (foundation, notes, date, ask, award, currStatus) => {
 
 // Retrieve all grants
 const retrieveGrants = async () => {
-    const query = movies.find();
+    const query = grants.find();
     return query.exec();
 }
 
