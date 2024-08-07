@@ -6,11 +6,11 @@ function Grant({ grant, onEdit, onDelete }) {
     return (
         <tr>
             <td>{grant.foundation}</td>
-            <td>grant.notes</td>
-            <td>grant.date</td>
-            <td>grant.ask</td>
-            <td>grant.award</td>
-            <td>grant.currStatus</td>
+            <td>{grant.notes}</td>
+            <td>{grant.date}</td>
+            <td>{grant.ask}</td>
+            <td>{grant.award}</td>
+            <td>{grant.currStatus}</td>
 
             <td><MdDeleteForever onClick={() => onDelete(grant._id)} /></td>
             <td><MdEdit onClick={() => onEdit(grant)} /></td>
