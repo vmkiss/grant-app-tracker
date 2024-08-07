@@ -20,5 +20,17 @@ function GrantsPage({ setGrant }) {
         redirect("/update");
     }
 
+    // Delete a grant
+    const onDeleteGrant = async _id => {
+        const response = await fetch(`./grants/${_id}`, { method: 'DELETE'});
+        if (response.status === 200) {
+            const getResponse = await fetch('/grants');
+            const grants = await getResponse.json();
+            setGrants(grants);
+        } else {
+            console.error(`Entry with following id could not be deleted = ${id}, status code = ${response.status}`)
+        }
+    }
+
 
 }
