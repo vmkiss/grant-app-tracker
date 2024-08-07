@@ -32,5 +32,23 @@ function GrantsPage({ setGrant }) {
         }
     }
 
+    // Load all grants
+    useEffect(() => {
+        loadGrants();
+    }, []);
 
+    // Display grants
+    return (
+        <>
+            <h2>List of Grants</h2>
+            <Link to="/create">Add Grant</Link>
+            <GrantList
+                grants={grants}
+                onEdit = {onEditGrant}
+                onDelete={onDeleteMovie}
+            />
+        </>
+    );
 }
+
+export default GrantsPage;
