@@ -58,6 +58,20 @@ export const AddGrantPage = () => {
                         value={date}
                         onChange={e => setDate(e.target.value)}
                         id="date"/>
+                    <label for="ask">Ask Amount</label>
+                    <input
+                        type="text"
+                        placeholder="ask"
+                        value={ask}
+                        onChange={e => setAsk(e.target.value)}
+                        id="ask"/>
+                    <label for="award">Award Amount</label>
+                    <input
+                        type="text"
+                        placeholder="award"
+                        value={award}
+                        onChange={e => setAward(e.target.value)}
+                        id="award"/>
                 </fieldset>
             </form>
         </div>
