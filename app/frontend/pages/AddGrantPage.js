@@ -12,5 +12,20 @@ export const AddGrantPage = () => {
 
     const redirect = useNavigate();
 
-    const addGrant
+    const addGrant = async () => {
+        const newGrant = { foundation, notes, date, ask, award, currStatus };
+        const response = await fetch('/movies', {
+            method: 'post',
+            body: JSON.stringify(newGrant),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        if (response.status === 201) {
+            alert(`Grant successfully added`);
+        } else {
+            alert(`Error occurred while trying to add grant`);
+        }
+        redirect("/");
+    };
 }
