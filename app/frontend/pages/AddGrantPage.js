@@ -61,17 +61,24 @@ export const AddGrantPage = () => {
                     <label for="ask">Ask Amount</label>
                     <input
                         type="text"
-                        placeholder="ask"
+                        placeholder="Amount of money requested"
                         value={ask}
                         onChange={e => setAsk(e.target.value)}
                         id="ask"/>
                     <label for="award">Award Amount</label>
                     <input
                         type="text"
-                        placeholder="award"
+                        placeholder="Amount of money awarded"
                         value={award}
                         onChange={e => setAward(e.target.value)}
                         id="award"/>
+                    <label for="status">Current Status</label>
+                    <input
+                        type="text"
+                        placeholder="Current status of grant application"
+                        value={currStatus}
+                        onChange={e => setCurrStatus(e.target.value)}
+                        id="status"/>
                 </fieldset>
             </form>
         </div>
