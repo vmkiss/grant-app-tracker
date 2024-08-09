@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import GrantList from '..components/GrantList';
+import GrantList from '../components/GrantList';
 import { Link } from 'react-router-dom';
 
 function GrantsPage({ setGrant }) {
