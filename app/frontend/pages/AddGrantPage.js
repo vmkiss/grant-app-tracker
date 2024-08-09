@@ -51,6 +51,13 @@ export const AddGrantPage = () => {
                         value={notes}
                         onChange={e => setNotes(e.target.value)}
                         id="notes"/>
+                    <label for="date">Date Due</label>
+                    <input
+                        type="text"
+                        placeholder="Deadline date"
+                        value={date}
+                        onChange={e => setDate(e.target.value)}
+                        id="date"/>
                 </fieldset>
             </form>
         </div>
