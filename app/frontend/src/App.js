@@ -23,13 +23,18 @@ function App() {
                     <Routes>
                     <Route path="/" element={<GrantsPage setGrant={setGrantToEdit}/>} />
                     <Route path="/create" element={<AddGrantPage />} /> 
-                    <Route path="/update" element={<EditMoviePage grantToEdit={grant} />} />
-                        
+                    <Route path="/update" element={<EditMoviePage grantToEdit={grant} />} />  
                     </Routes>
                 </section>
             </main>
-        </BrowserRouter>
->        </>
-    )
 
+            <footer>
+            <p>Copyright statement</p>
+          </footer>
+
+        </BrowserRouter>
+        </>
+    );
 }
+
+export default App;
