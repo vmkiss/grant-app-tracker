@@ -28,4 +28,31 @@ export const AddGrantPage = () => {
         }
         redirect("/");
     };
-}
+
+    return (
+        <>
+        <div>
+            <h2>Add a grant</h2>
+            <p>Complete the fields to add a new grant</p>
+            <form onSubmit={(e) => { e.preventDefault();}}>
+                <fieldset>
+                    <legend>Grant Details</legend>
+                    <label for="foundation">Foundation Name</label>
+                    <input
+                        type="text"
+                        placeholder="Name of foundation"
+                        value={foundation}
+                        onChange={e => setFoundation(e.target.value)}
+                        id="foundation" />
+                    <label for="notes">Notes</label>
+                    <input
+                        type="text"
+                        placeholder="Enter notes about grant's area of focus or requirements"
+                        value={notes}
+                        onChange={e => setNotes(e.target.value)}
+                        id="notes"/>
+                </fieldset>
+            </form>
+        </div>
+        </>
+    )}
