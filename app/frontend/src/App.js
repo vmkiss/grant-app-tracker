@@ -23,7 +23,7 @@ function App() {
                     <Routes>
                     <Route path="/" element={<GrantsPage setGrant={setGrantToEdit}/>} />
                     <Route path="/create" element={<AddGrantPage />} /> 
-                    <Route path="/update" element={<EditMoviePage grantToEdit={grant} />} />  
+                    <Route path="/update" element={<EditGrantPage grantToEdit={grant} />} />  
                     </Routes>
                 </section>
             </main>
