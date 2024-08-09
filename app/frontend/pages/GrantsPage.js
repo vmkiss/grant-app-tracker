@@ -9,7 +9,7 @@ function GrantsPage({ setGrant }) {
 
     // Retrieve entire list of grants
     const loadGrants = async () => {
-        const response = await fetch('/movies');
+        const response = await fetch('/grants');
         const grants = await response.json();
         setGrants(grants);
     }
@@ -45,7 +45,7 @@ function GrantsPage({ setGrant }) {
             <GrantList
                 grants={grants}
                 onEdit = {onEditGrant}
-                onDelete={onDeleteMovie}
+                onDelete={onDeleteGrant}
             />
         </>
     );
