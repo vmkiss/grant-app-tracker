@@ -39,8 +39,62 @@ export const EditGrantPage = ({ grantToEdit }) => {
             <div>
                 <h2>Edit a grant</h2>
                 <p>Complete the fields to edit the grant.</p>
+                <form onSubmit={(e) => { e.preventDefault();}}>
+                <fieldset>
+                    <legend>Grant Details</legend>
+                    <label for="foundation">Foundation Name</label>
+                    <input
+                        type="text"
+                        placeholder="Name of foundation"
+                        value={foundation}
+                        onChange={e => setFoundation(e.target.value)}
+                        id="foundation" />
+                    <label for="notes">Notes</label>
+                    <input
+                        type="text"
+                        placeholder="Enter notes about grant's area of focus or requirements"
+                        value={notes}
+                        onChange={e => setNotes(e.target.value)}
+                        id="notes"/>
+                    <label for="date">Date Due</label>
+                    <input
+                        type="text"
+                        placeholder="Deadline date"
+                        value={date}
+                        onChange={e => setDate(e.target.value)}
+                        id="date"/>
+                    <label for="ask">Ask Amount</label>
+                    <input
+                        type="text"
+                        placeholder="Amount of money requested"
+                        value={ask}
+                        onChange={e => setAsk(e.target.value)}
+                        id="ask"/>
+                    <label for="award">Award Amount</label>
+                    <input
+                        type="text"
+                        placeholder="Amount of money awarded"
+                        value={award}
+                        onChange={e => setAward(e.target.value)}
+                        id="award"/>
+                    <label for="status">Current Status</label>
+                    <input
+                        type="text"
+                        placeholder="Current status of grant application"
+                        value={currStatus}
+                        onChange={e => setCurrStatus(e.target.value)}
+                        id="status"/>
+                    <label for="submit">
+                    <button
+                        type="submit"
+                        onClick={editGrant}
+                        id="submit"
+                    >Save</button> updates to grant application</label>
+                </fieldset>
+            </form>
             </div>
             </>
-        )
-
+        );
     }
+
+    export default EditGrantPage;
