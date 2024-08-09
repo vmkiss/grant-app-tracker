@@ -12,9 +12,10 @@ export const AddGrantPage = () => {
 
     const redirect = useNavigate();
 
+    // Add new grant to database using values from user input
     const addGrant = async () => {
         const newGrant = { foundation, notes, date, ask, award, currStatus };
-        const response = await fetch('/movies', {
+        const response = await fetch('/grants', {
             method: 'post',
             body: JSON.stringify(newGrant),
             headers: {
@@ -79,8 +80,17 @@ export const AddGrantPage = () => {
                         value={currStatus}
                         onChange={e => setCurrStatus(e.target.value)}
                         id="status"/>
+                    <label for="submit">
+                    <button
+                        type="submit"
+                        onClick={addGrant}
+                        id="submit"
+                    >Add</button> to grant applications</label>
                 </fieldset>
             </form>
         </div>
         </>
-    )}
+    );
+}
+
+export default AddGrantPage;
