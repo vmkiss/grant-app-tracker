@@ -28,7 +28,7 @@ function GrantsPage({ setGrant }) {
             const grants = await getResponse.json();
             setGrants(grants);
         } else {
-            console.error(`Entry with following id could not be deleted = ${id}, status code = ${response.status}`)
+            console.error(`Entry with following id could not be deleted = ${_id}, status code = ${response.status}`)
         }
     }
 
