@@ -19,7 +19,7 @@ GET http://localhost:3000/grants/66b8064950b379ef6eec242f HTTP/1.1
 
 
 ### UPDATE GRANT
-PUT http://localhost:3000/grants/66b0048704cd2e9e7c719e8c HTTP/1.1
+PUT http://localhost:3000/grants/66b8094dccab0e560470bc74 HTTP/1.1
 content-type: application/json
 
 {
