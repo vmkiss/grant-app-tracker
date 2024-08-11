@@ -40,7 +40,6 @@ function GrantsPage({ setGrant }) {
     // Display grants
     return (
         <>
-            <h2>List of Grants</h2>
             <Link to="/create">Add Grant</Link>
             <GrantList
                 grants={grants}

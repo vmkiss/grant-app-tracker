@@ -5,7 +5,6 @@ import Grant from './Grant';
 function GrantList({ grants, onDelete, onEdit }) {
     return(
         <table id="grants">
-            <caption>Add and Edit Grants</caption>
             <thead>
                 <tr>
                     <th>Foundation Name</th>
