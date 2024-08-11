@@ -13,7 +13,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
     const redirect = useNavigate();
 
     const editGrant = async () => {
-        const response = await fetch(`/grants.${grantToEdit._id}`, {
+        const response = await fetch(`/grants/${grantToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 foundation: foundation,
