@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 export const EditGrantPage = ({ grantToEdit }) => {
     //Set all user input to empty string on initial render
-    const [foundation, setFoundation] = useState('');
-    const [notes, setNotes] = useState('');
-    const [date, setDate] = useState('');
-    const [ask, setAsk] = useState('');
-    const [award, setAward] = useState('');
-    const [currStatus, setCurrStatus] = useState('');
+    const [foundation, setFoundation] = useState(grantToEdit.foundation);
+    const [notes, setNotes] = useState(grantToEdit.notes);
+    const [date, setDate] = useState(grantToEdit.date);
+    const [ask, setAsk] = useState(grantToEdit.ask);
+    const [award, setAward] = useState(grantToEdit.award);
+    const [currStatus, setCurrStatus] = useState(grantToEdit.currStatus);
 
     const redirect = useNavigate();
 
