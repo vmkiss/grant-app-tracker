@@ -86,7 +86,6 @@ export const EditGrantPage = ({ grantToEdit }) => {
                         id="status"/>
                     <label for="submit">
                     <button
-                        type="submit"
                         onClick={editGrant}
                         id="submit"
                     >Save</button> updates to grant application</label>
