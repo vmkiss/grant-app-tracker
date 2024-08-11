@@ -34,6 +34,7 @@ app.get('/grants', (req, res) => {
         .then(grants => {
             if (grants !== null) {
                 console.log('All grants successfully retrieved')
+                res.json(grants);
             } else {
                 res.status(404).json({ Error: 'No grants found' });
             }
