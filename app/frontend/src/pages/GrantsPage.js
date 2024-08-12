@@ -41,7 +41,7 @@ function GrantsPage({ setGrant }) {
     return (
         <>
             <Link to="/create">
-                <button type="button" class="btn btn-success btn-lg">Add Grant</button>
+                <button type="button" class="btn btn-success btn-lg mb-3">Add Grant</button>
             </Link>
             <GrantList
                 grants={grants}

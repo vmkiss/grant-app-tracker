@@ -96,7 +96,8 @@ export const AddGrantPage = () => {
                         type="submit"
                         onClick={addGrant}
                         id="submit"
-                    >Add</button> to grant applications</label>
+                    >Add grant</button>
+                    </label>
                 </fieldset>
             </form>
         </div>
