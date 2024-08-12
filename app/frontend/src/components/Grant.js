@@ -7,7 +7,7 @@ function Grant({ grant, onEdit, onDelete }) {
         <tr>
             <td>{grant.foundation}</td>
             <td>{grant.notes}</td>
-            <td>{grant.date}</td>
+            <td>{grant.date.slice(0, 10)}</td>
             <td>{grant.ask}</td>
             <td>{grant.award}</td>
             <td>{grant.currStatus}</td>

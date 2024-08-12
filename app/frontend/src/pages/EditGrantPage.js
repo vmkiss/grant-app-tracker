@@ -61,7 +61,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
                     <div class="mb-3 row">
                         <label for="date">Date Due</label>
                         <input
-                            type="text"
+                            type="date"
                             placeholder="Deadline date"
                             value={date}
                             onChange={e => setDate(e.target.value)}
