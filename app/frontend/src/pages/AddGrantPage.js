@@ -32,7 +32,7 @@ export const AddGrantPage = () => {
 
     return (
         <>
-        <div class="border py-3 px-5">
+        <div id="form-div" class="border py-3 px-5">
             <h2>Complete all fields to add a new grant.</h2>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
