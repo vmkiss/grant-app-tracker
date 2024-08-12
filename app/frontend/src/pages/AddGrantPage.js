@@ -38,48 +38,60 @@ export const AddGrantPage = () => {
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
                     <legend>Grant Details</legend>
-                    <label for="foundation">Foundation Name</label>
-                    <input
-                        type="text"
-                        placeholder="Name of foundation"
-                        value={foundation}
-                        onChange={e => setFoundation(e.target.value)}
-                        id="foundation" />
-                    <label for="notes">Notes</label>
-                    <input
-                        type="text"
-                        placeholder="Enter notes about grant's area of focus or requirements"
-                        value={notes}
-                        onChange={e => setNotes(e.target.value)}
-                        id="notes"/>
-                    <label for="date">Date Due</label>
-                    <input
-                        type="text"
-                        placeholder="Deadline date"
-                        value={date}
-                        onChange={e => setDate(e.target.value)}
-                        id="date"/>
-                    <label for="ask">Ask Amount</label>
-                    <input
-                        type="text"
-                        placeholder="Amount of money requested"
-                        value={ask}
-                        onChange={e => setAsk(e.target.value)}
-                        id="ask"/>
-                    <label for="award">Award Amount</label>
-                    <input
-                        type="text"
-                        placeholder="Amount of money awarded"
-                        value={award}
-                        onChange={e => setAward(e.target.value)}
-                        id="award"/>
-                    <label for="status">Current Status</label>
-                    <input
-                        type="text"
-                        placeholder="Current status of grant application"
-                        value={currStatus}
-                        onChange={e => setCurrStatus(e.target.value)}
-                        id="status"/>
+                    <div class="mb-3 row">
+                        <label for="foundation">Foundation Name</label>
+                        <input
+                            type="text"
+                            placeholder="Name of foundation"
+                            value={foundation}
+                            onChange={e => setFoundation(e.target.value)}
+                            id="foundation" />
+                        <label for="notes">Notes</label>
+                    </div>
+                    <div class="mb-3 row">
+                        <input
+                            type="text"
+                            placeholder="Enter notes about grant's area of focus or requirements"
+                            value={notes}
+                            onChange={e => setNotes(e.target.value)}
+                            id="notes"/>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="date">Date Due</label>
+                        <input
+                            type="text"
+                            placeholder="Deadline date"
+                            value={date}
+                            onChange={e => setDate(e.target.value)}
+                            id="date"/>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ask">Ask Amount</label>
+                        <input
+                            type="text"
+                            placeholder="Amount of money requested"
+                            value={ask}
+                            onChange={e => setAsk(e.target.value)}
+                            id="ask"/>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="award">Award Amount</label>
+                        <input
+                            type="text"
+                            placeholder="Amount of money awarded"
+                            value={award}
+                            onChange={e => setAward(e.target.value)}
+                            id="award"/>
+                    </div>
+                    <div>
+                        <label for="status">Current Status</label>
+                        <input
+                            type="text"
+                            placeholder="Current status of grant application"
+                            value={currStatus}
+                            onChange={e => setCurrStatus(e.target.value)}
+                            id="status"/>
+                    </div>
                     <label for="submit">
                     <button
                         type="submit"
