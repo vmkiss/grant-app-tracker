@@ -40,7 +40,9 @@ function GrantsPage({ setGrant }) {
     // Display grants
     return (
         <>
-            <Link to="/create">Add Grant</Link>
+            <Link to="/create">
+                <button type="button" class="btn btn-success btn-lg">Add Grant</button>
+            </Link>
             <GrantList
                 grants={grants}
                 onEdit = {onEditGrant}
