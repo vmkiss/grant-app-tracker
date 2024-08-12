@@ -33,11 +33,9 @@ export const AddGrantPage = () => {
     return (
         <>
         <div>
-            <h2>Add a grant</h2>
-            <p>Complete the fields to add a new grant</p>
+            <h2>Complete all fields to add a new grant.</h2>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <legend>Grant Details</legend>
                     <div class="mb-3 row">
                         <label for="foundation">Foundation Name</label>
                         <input
@@ -46,9 +44,9 @@ export const AddGrantPage = () => {
                             value={foundation}
                             onChange={e => setFoundation(e.target.value)}
                             id="foundation" />
-                        <label for="notes">Notes</label>
                     </div>
                     <div class="mb-3 row">
+                        <label for="notes">Notes</label>
                         <input
                             type="text"
                             placeholder="Enter notes about grant's area of focus or requirements"
@@ -83,7 +81,7 @@ export const AddGrantPage = () => {
                             onChange={e => setAward(e.target.value)}
                             id="award"/>
                     </div>
-                    <div>
+                    <div class="mb-3 row">
                         <label for="status">Current Status</label>
                         <input
                             type="text"
@@ -94,6 +92,7 @@ export const AddGrantPage = () => {
                     </div>
                     <label for="submit">
                     <button
+                    class="btn btn-success btn-lg"
                         type="submit"
                         onClick={addGrant}
                         id="submit"
