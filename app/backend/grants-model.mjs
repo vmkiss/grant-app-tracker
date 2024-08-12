@@ -23,7 +23,7 @@ db.once("open", (err) => {
 const grantSchema = mongoose.Schema({
     foundation: { type: String, required: true },
     notes: { type: String, required: true },
-    date: { type: String, required: true },
+    date: { type: Date, required: true },
     ask: { type: String, required: true },
     award: { type: String, required: true },
     currStatus: { type: String, required: true }
