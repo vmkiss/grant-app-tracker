@@ -87,12 +87,15 @@ export const EditGrantPage = ({ grantToEdit }) => {
                     </div>
                     <div class="mb-3 row">
                         <label for="status">Current Status</label>
-                        <input
-                            type="text"
-                            placeholder="Current status of grant application"
+                        <select
                             value={currStatus}
-                            onChange={e => setCurrStatus(e.target.value)}
-                            id="status"/>
+                            onChange={e => setCurrStatus(e.target.value)} 
+                            >
+                            <option value="Not submitted yet">Not submitted yet</option>
+                            <option value="Submitted">Submitted</option>
+                            <option value="Awarded">Awarded</option>
+                            <option value="Declined">Declined</option>
+                        </select>
                     </div>
                     <div class="d-flex justify-content-center">
                         <label for="submit">
