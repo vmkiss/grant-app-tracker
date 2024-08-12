@@ -7,7 +7,7 @@ export const AddGrantPage = () => {
     const [notes, setNotes] = useState('');
     const [date, setDate] = useState('');
     const [ask, setAsk] = useState('');
-    const [award, setAward] = useState('');
+    const [award, setAward] = useState('$0');
     const [currStatus, setCurrStatus] = useState('');
 
     const redirect = useNavigate();
