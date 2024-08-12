@@ -94,13 +94,15 @@ export const EditGrantPage = ({ grantToEdit }) => {
                             onChange={e => setCurrStatus(e.target.value)}
                             id="status"/>
                     </div>
-                    <label for="submit">
-                    <button
-                        class="btn btn-success btn-lg mb-3"
-                        onClick={editGrant}
-                        id="submit"
-                    >Save updates</button>
-                    </label>
+                    <div class="d-flex justify-content-center">
+                        <label for="submit">
+                        <button
+                            class="btn btn-success btn-lg mb-3"
+                            onClick={editGrant}
+                            id="submit"
+                        >Save updates</button>
+                        </label>
+                    </div>
                 </fieldset>
             </form>
             </div>

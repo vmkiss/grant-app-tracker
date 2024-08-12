@@ -90,14 +90,16 @@ export const AddGrantPage = () => {
                             onChange={e => setCurrStatus(e.target.value)}
                             id="status"/>
                     </div>
-                    <label for="submit">
-                    <button
-                    class="btn btn-success btn-lg"
-                        type="submit"
-                        onClick={addGrant}
-                        id="submit"
-                    >Add grant</button>
-                    </label>
+                    <div class="d-flex justify-content-center">
+                        <label for="submit">
+                        <button
+                            class="btn btn-success btn-lg"
+                            type="submit"
+                            onClick={addGrant}
+                            id="submit"
+                        >Add grant</button>
+                        </label>
+                    </div>
                 </fieldset>
             </form>
         </div>
