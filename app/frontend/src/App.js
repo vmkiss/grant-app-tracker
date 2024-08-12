@@ -16,7 +16,7 @@ function App() {
         <BrowserRouter>
 
             <header>
-                <h1>Grant Application Tracker</h1>
+                <h1 class="border border-3 mt-3 py-3 px-5">Grant Application Tracker</h1>
             </header>
 
             <main>
