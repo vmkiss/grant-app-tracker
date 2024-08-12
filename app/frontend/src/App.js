@@ -30,7 +30,7 @@ function App() {
             </main>
 
             <footer>
-            <p>Copyright statement</p>
+            <p><p>&copy; 2024 Veronika Kiss</p></p>
           </footer>
 
         </BrowserRouter>
