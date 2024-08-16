@@ -1,9 +1,9 @@
 import User from './user-model.mjs'
-import {jsonwebtoken as jwt} from 'jsonwebtoken'
+import jsonwebtoken from 'jsonwebtoken'
 
 
 const createToken = (_id) => {
-    return jwt.sign({_id}, process.env.SECRET, { expiresIn: '1d' })
+    return jsonwebtoken.sign({_id}, process.env.SECRET, { expiresIn: '1d' })
 }
 
 // login user
@@ -18,7 +18,10 @@ const signupUser = async (req, res) => {
     try {
         const user = await User.signup(email, password)
 
-        res.status(200).json( {email, user} )
+        // create a token
+        const token = createToken(user._id)
+
+        res.status(200).json( {email, token} )
     } catch (error) {
         res.status(400).json( {error: error.message} )
     }
