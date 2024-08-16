@@ -43,6 +43,7 @@ content-type: application/json
     "password": "mypass12345"
 }
 
+
 ### SIGN UP USER
 POST http://localhost:3000/user/signup HTTP/1.1
 content-type: application/json
