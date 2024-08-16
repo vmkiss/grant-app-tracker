@@ -16,3 +16,19 @@ db.once("open", (err) => {
         console.log('Success: Successfully connected to database');
     }
 });
+
+// Define user schema
+const userSchema = mongoose.Schema({
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
+});
+
+// Define Users model and compile from schema
+module.exports = mongoose.model('User', userSchema)
