@@ -8,4 +8,4 @@ const signupUser = async (req, res) => {
     res.json({ Message: 'Sign up user' })
 }
 
-module.exports = { signupUser, loginUser }
+export { signupUser, loginUser }
