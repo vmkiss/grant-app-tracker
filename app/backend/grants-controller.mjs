@@ -3,10 +3,12 @@
 import 'dotenv/config';
 import express from 'express';
 import * as grants from './grants-model.mjs';
+const userRoutes = require('./user-routes')
 
 const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
+app.use('/user', userRoutes)
 
 // Create grant controller
 app.post ('/grants', (req, res) => {
