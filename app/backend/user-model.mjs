@@ -33,7 +33,7 @@ const userSchema = mongoose.Schema({
 });
 
 // Create static sign up method
-userSchema.statics.signup = async (email, password) => {
+userSchema.statics.signup = async function(email, password) {
     // Check if user's email is unique - raise error if not
     const exists = await this.findOne({ email });
     if (exists) {
@@ -46,12 +46,11 @@ userSchema.statics.signup = async (email, password) => {
 
     // Store user's email and password in database
     const user = await this.create({ email, password: hash })
-
+    
     return user
 }
 
 
 // Define Users model and compile from schema
-const users = mongoose.model('Users', userSchema);
-
-export default { users }
+const User = mongoose.model('User', userSchema);
+export default User

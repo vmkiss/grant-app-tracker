@@ -1,4 +1,4 @@
-import users from './user-model..mjs'
+import User from './user-model.mjs'
 
 // login user
 const loginUser = async (req, res) => {
@@ -7,7 +7,15 @@ const loginUser = async (req, res) => {
 
 // sign up user
 const signupUser = async (req, res) => {
-    res.json({ Message: 'Sign up user' })
+    const { email, password } = req.body
+
+    try {
+        const user = await User.signup(email, password)
+
+        res.status(200).json( {email, user} )
+    } catch (error) {
+        res.status(400).json( {error: error.message} )
+    }
 }
 
 export { signupUser, loginUser }
