@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 import 'dotenv/config';
+import bcrypt from 'bcrypt';
+
 
 // Establish database connection
 mongoose.connect(
@@ -29,6 +31,25 @@ const userSchema = mongoose.Schema({
         required: true
     }
 });
+
+// Create static sign up method
+userSchema.statics.signup = async (email, password) => {
+    // Check if user's email is unique - raise error if not
+    const exists = await this.findOne({ email });
+    if (exists) {
+        throw Error('Email already in use')
+    }
+
+    // Hash user's password with bcrypt
+    const salt = await bcrypt.genSalt(10)
+    const hash = await bcrypt.hash(password, salt)
+
+    // Store user's email and password in database
+    const user = await this.create({ email, password: hash })
+
+    return user
+}
+
 
 // Define Users model and compile from schema
 const users = mongoose.model('Users', userSchema);
