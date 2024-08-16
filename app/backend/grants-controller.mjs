@@ -3,7 +3,7 @@
 import 'dotenv/config';
 import express from 'express';
 import * as grants from './grants-model.mjs';
-const userRoutes = require('./user-routes')
+import { userRoutes } from './user-routes.mjs';
 
 const PORT = process.env.PORT;
 const app = express();

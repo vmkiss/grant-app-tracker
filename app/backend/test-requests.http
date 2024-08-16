@@ -33,3 +33,21 @@ content-type: application/json
 
 ### DELETE GRANT
 DELETE http://localhost:3000/grants/66b0048704cd2e9e7c719e8c
+
+### LOGIN USER
+POST http://localhost:3000/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "mypass12345"
+}
+
+### SIGN UP USER
+POST http://localhost:3000/user/signup HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "mypass12345"
+}

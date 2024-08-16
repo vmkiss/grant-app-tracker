@@ -1,3 +1,5 @@
+import users from './user-model..mjs'
+
 // login user
 const loginUser = async (req, res) => {
     res.json({ Message: 'Login user' })

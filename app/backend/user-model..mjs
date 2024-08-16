@@ -31,4 +31,6 @@ const userSchema = mongoose.Schema({
 });
 
 // Define Users model and compile from schema
-module.exports = mongoose.model('User', userSchema)
+const users = mongoose.model('Users', userSchema);
+
+export default { users }
