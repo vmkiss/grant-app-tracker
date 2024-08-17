@@ -25,7 +25,8 @@ function App() {
             <main>
                 <section>
                     <Routes>
-                    <Route path="/" element={<GrantsPage setGrant={setGrantToEdit}/>} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/grants" element={<GrantsPage setGrant={setGrantToEdit}/>} />
                     <Route path="/create" element={<AddGrantPage />} /> 
                     <Route path="/update" element={<EditGrantPage grantToEdit={grant} />} />  
                     <Route path="/login" element={<Login />} /> 
