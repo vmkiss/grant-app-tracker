@@ -43,6 +43,23 @@ content-type: application/json
     "password": "mypass12345"
 }
 
+### LOGIN USER
+POST http://localhost:3000/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "lalala@msn.com",
+    "password": "alkfhkfJ789!"
+}
+
+### LOGIN USER 2
+POST http://localhost:3000/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "oh_hello@msn.com",
+    "password": "alkfhkfJ789!"
+}
 
 ### SIGN UP USER
 POST http://localhost:3000/user/signup HTTP/1.1
@@ -51,4 +68,22 @@ content-type: application/json
 {
     "email": "test@gmail.com",
     "password": "mypass12345"
+}
+
+### SIGN UP USER 2
+POST http://localhost:3000/user/signup HTTP/1.1
+content-type: application/json
+
+{
+    "email": "dummy@gmail.com",
+    "password": "hi"
+}
+
+### SIGN UP USER 3
+POST http://localhost:3000/user/signup HTTP/1.1
+content-type: application/json
+
+{
+    "email": "oh_hello_baby@msn.com",
+    "password": "alkfhkfJ789!"
 }
