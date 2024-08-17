@@ -4,8 +4,14 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        console.log(email, password)
+    }
+
     return (
-        <form onSubmit={}>
+        <form onSubmit={handleSubmit}>
             <h2>Sign up</h2>
             <label>Email:</label>
             <input
@@ -22,3 +28,5 @@ const Signup = () => {
         </form>
     )
 }
+
+export default Signup
