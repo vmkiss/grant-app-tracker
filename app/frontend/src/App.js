@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import GrantsPage from './pages/GrantsPage';
 import AddGrantPage from './pages/AddGrantPage';
 import EditGrantPage from './pages/EditGrantPage';
+import Login from './pages/LogIn';
+import Signup from './pages/SignUp';
 
 // Define function that renders the content in Routes
 function App() {
@@ -25,6 +27,8 @@ function App() {
                     <Route path="/" element={<GrantsPage setGrant={setGrantToEdit}/>} />
                     <Route path="/create" element={<AddGrantPage />} /> 
                     <Route path="/update" element={<EditGrantPage grantToEdit={grant} />} />  
+                    <Route path="/login" element={<Login />} /> 
+                    <Route path="/signup" element={<Signup />} /> 
                     </Routes>
                 </section>
             </main>
