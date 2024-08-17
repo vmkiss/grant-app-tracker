@@ -4,9 +4,13 @@ const Navbar = () => {
 
     return (
         <header>
-            <div>
-                <Link to="/login">Log in</Link>
-                <Link to="/signup">Sign up</Link>
+            <div class="d-flex justify-content-end">
+                <Link to="/login">
+                    <button class="btn btn-success btn-lg mx-2 mt-2">Log in</button>
+                </Link>
+                <Link to="/signup">
+                    <button class="btn btn-success btn-lg mx-2 mt-2">Sign up</button>
+                </Link>
             </div>
         </header>
     )
