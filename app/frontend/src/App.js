@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import HomePage from './pages/HomePage';
 import GrantsPage from './pages/GrantsPage';
 import AddGrantPage from './pages/AddGrantPage';
 import EditGrantPage from './pages/EditGrantPage';
