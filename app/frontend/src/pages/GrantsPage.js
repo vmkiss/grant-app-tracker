@@ -22,9 +22,9 @@ function GrantsPage({ setGrant }) {
 
     // Delete a grant
     const onDeleteGrant = async _id => {
-        const response = await fetch(`./grants/${_id}`, { method: 'DELETE'});
+        const response = await fetch(`/grants/delete/${_id}`, { method: 'DELETE'});
         if (response.status === 200) {
-            const getResponse = await fetch('/grants');
+            const getResponse = await fetch('/grants/all');
             const grants = await getResponse.json();
             setGrants(grants);
         } else {
