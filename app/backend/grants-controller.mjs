@@ -4,6 +4,7 @@ import 'dotenv/config';
 import express from 'express';
 import * as grants from './grants-model.mjs';
 import { userRoutes } from './user-routes.mjs';
+import requireAuth from './requireAuth';
 
 const PORT = process.env.PORT;
 const app = express();
