@@ -12,7 +12,7 @@ content-type: application/json
 }
 
 ### RETRIEVE ALL GRANTS 
-GET http://localhost:3000/grants HTTP/1.1
+GET http://localhost:3000/grants/all HTTP/1.1
 
 ### RETRIEVE GRANT BY ID
 GET http://localhost:3000/grants/66b8064950b379ef6eec242f HTTP/1.1
