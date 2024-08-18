@@ -54,4 +54,27 @@ const retrieveById = (req, res) => {
         });
 }
 
-export { createGrant, retrieveAll, retrieveById }
+// Update grant by id controller
+const editById = (req, res) => {
+    grants.updateGrant(
+        req.params._id,
+        req.body.foundation,
+        req.body.notes,
+        req.body.date,
+        req.body.ask,
+        req.body.award,
+        req.body.currStatus
+    )
+        .then(grant => {
+            console.log(`${grant.foundation} grant successfully updated`);
+            res.json(grant);
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(400).json({ Error: 'Grant could not be updated' });
+        });
+}
+
+
+
+export { createGrant, retrieveAll, retrieveById, editById}
