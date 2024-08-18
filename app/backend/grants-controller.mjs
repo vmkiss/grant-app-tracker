@@ -37,4 +37,21 @@ const retrieveAll = (req, res) => {
         });
 }
 
-export { createGrant, retrieveAll }
+// Retrieve grant by id controller
+const retrieveById = (req, res) => {
+    grants.retrieveGrantByID(req.params._id)
+        .then(grant => {
+            if (grant != null) {
+                console.log(`${grant.foundation} grant was retrieve by its ID`)
+                res.json(grant);
+            } else {
+                res.status(404).json({ Error: 'No grants found'})
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(400).json({ Error: 'Grant could not be retrieved by its ID' });
+        });
+}
+
+export { createGrant, retrieveAll, retrieveById }
