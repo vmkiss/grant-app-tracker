@@ -75,6 +75,22 @@ const editById = (req, res) => {
         });
 }
 
+const deleteGrant = (req, res) => {
+    grants.deleteGrantByID(req.params._id)
+        .then(deletedCount => {
+            if (deletedCount === 1) {
+                console.log(`Based on its ID, ${deletedCount} grant was deleted.`);
+                res.status(200).send({ Success: `${deletedCount} grant was deleted based on its ID` });
+            } else {
+                res.status(404).json({ Error: 'Grant could not be deleted' })
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            res.send({ Error: 'Grant could not be deleted based on ID' });
+        });
+}
 
 
-export { createGrant, retrieveAll, retrieveById, editById}
+
+export { createGrant, retrieveAll, retrieveById, editById, deleteGrant }

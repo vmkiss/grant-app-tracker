@@ -1,5 +1,5 @@
 import express from 'express';
-import { createGrant, retrieveAll, retrieveById, editById } from './grants-controller.mjs';
+import { createGrant, retrieveAll, retrieveById, editById, deleteGrant } from './grants-controller.mjs';
 
 const grantRoutes = express.Router()
 
@@ -14,5 +14,8 @@ grantRoutes.get('/get/:_id', retrieveById)
 
 // Edit grant by id route
 grantRoutes.put('/edit/:_id', editById)
+
+// Delete grant route
+grantRoutes.delete('/delete/:_id', deleteGrant)
 
 export { grantRoutes }
