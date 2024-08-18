@@ -13,7 +13,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
     const redirect = useNavigate();
 
     const editGrant = async () => {
-        const response = await fetch(`/grants/${grantToEdit._id}`, {
+        const response = await fetch(`/grants/edit/${grantToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 foundation: foundation,
@@ -31,7 +31,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
                 const errMessage = await response.json();
                 alert(`Error occurred while trying to edit grant: ${response.status}. ${errMessage.Error}`);
             }
-            redirect("/");
+            redirect("/grants");
         }
 
         return (
