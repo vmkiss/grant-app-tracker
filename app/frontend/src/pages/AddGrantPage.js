@@ -15,7 +15,7 @@ export const AddGrantPage = () => {
     // Add new grant to database using values from user input
     const addGrant = async () => {
         const newGrant = { foundation, notes, date, ask, award, currStatus };
-        const response = await fetch('/grants', {
+        const response = await fetch('/grants/create', {
             method: 'post',
             body: JSON.stringify(newGrant),
             headers: {
