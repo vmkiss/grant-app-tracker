@@ -1,7 +1,11 @@
 import express from 'express';
 import { createGrant, retrieveAll, retrieveById, editById, deleteGrant } from './grants-controller.mjs';
+import requireAuth from './requireAuth.mjs';
 
 const grantRoutes = express.Router()
+
+// Verify that user is authenticated before giving access to grant routes
+grantRoutes.use(requireAuth)
 
 // Create grant route
 grantRoutes.post('/create', createGrant)
