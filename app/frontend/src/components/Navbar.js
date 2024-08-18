@@ -16,7 +16,7 @@ const Navbar = () => {
                 </Link>
                 <nav>
                     <div>
-                        <button onclick={handleClick}>Log out</button>
+                        <button class="btn btn-success btn-lg mx-2 mt-2" onclick={handleClick}>Log out</button>
                     </div>
                 </nav>
                 <Link to="/signup">
