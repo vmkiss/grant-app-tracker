@@ -9,7 +9,7 @@ function GrantsPage({ setGrant }) {
 
     // Retrieve entire list of grants
     const loadGrants = async () => {
-        const response = await fetch('/grants');
+        const response = await fetch('/grants/all');
         const grants = await response.json();
         setGrants(grants);
     }
