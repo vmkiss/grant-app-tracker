@@ -27,7 +27,7 @@ export const AddGrantPage = () => {
         } else {
             alert(`Error occurred while trying to add grant`);
         }
-        redirect("/");
+        redirect("/grants");
     };
 
     return (
