@@ -10,6 +10,10 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 app.use('/user', userRoutes)
+const router = express.Router()
+
+// Require auth for all grant routes
+router.use(requireAuth)
 
 // Create grant controller
 app.post ('/grants', (req, res) => {

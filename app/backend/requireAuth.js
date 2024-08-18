@@ -1,7 +1,7 @@
 import jsonwebtoken from 'jsonwebtoken'
 import User from './user-model.mjs'
 
-const requireAuth = (req, res, next) => {
+const requireAuth = async (req, res, next) => {
     // Verfify user authentification
     const { authorization } = req.headers
 
