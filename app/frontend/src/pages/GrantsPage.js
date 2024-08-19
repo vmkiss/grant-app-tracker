@@ -28,7 +28,17 @@ function GrantsPage({ setGrant }) {
 
     // Delete a grant
     const onDeleteGrant = async _id => {
-        const response = await fetch(`/grants/delete/${_id}`, { method: 'DELETE'});
+        if (!user) {
+            return
+        }
+
+        const response = await fetch(`/grants/delete/${_id}`, { 
+            method: 'DELETE'
+        }, {
+           headers: {
+            'Authorization': `Bearer ${user.token}`
+           }   
+        });
         if (response.status === 200) {
             const getResponse = await fetch('/grants/all');
             const grants = await getResponse.json();
