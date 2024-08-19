@@ -11,6 +11,10 @@ function GrantsPage({ setGrant }) {
 
     // Retrieve entire list of grants
     const loadGrants = async () => {
+        if (!user) {
+            return
+        }
+
         const response = await fetch('/grants/all', {
             headers: {
                 'Authorization': `Bearer ${user.token}`
@@ -50,10 +54,8 @@ function GrantsPage({ setGrant }) {
 
     // Load all grants
     useEffect(() => {
-        if (user) {
-            loadGrants();
-        }
-    }, [user]);
+        loadGrants();
+    }, []);
 
     // Display grants
     return (

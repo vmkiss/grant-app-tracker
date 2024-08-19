@@ -1,5 +1,6 @@
 import React, { useState }  from 'react';
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from '../hooks/useAuthContext';
 
 export const EditGrantPage = ({ grantToEdit }) => {
     //Set all user input to empty string on initial render
@@ -18,7 +19,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
             console.log('You must be logged in')
             return
         }
-        
+
         const response = await fetch(`/grants/edit/${grantToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({
