@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { useAuthContext } from './useAuthContext'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 export const useLogIn= () => {
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
     const { dispatch } = useAuthContext()
-    const redirect = useNavigate();
+    const redirect = useNavigate()
 
     const login = async (email, password) => {
         setIsLoading(true)
