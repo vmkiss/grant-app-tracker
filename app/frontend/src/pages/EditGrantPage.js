@@ -12,7 +12,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
     const [currStatus, setCurrStatus] = useState(grantToEdit.currStatus);
 
     const redirect = useNavigate();
-    const user = useAuthContext()
+    const {user} = useAuthContext()
 
     const editGrant = async () => {
         if (!user) {
