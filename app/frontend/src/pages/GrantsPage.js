@@ -2,14 +2,20 @@ import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GrantList from '../components/GrantList';
 import { Link } from 'react-router-dom';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 function GrantsPage({ setGrant }) {
     const redirect = useNavigate();
     const [grants, setGrants] = useState([]);
+    const {user} = useAuthContext()
 
     // Retrieve entire list of grants
     const loadGrants = async () => {
-        const response = await fetch('/grants/all');
+        const response = await fetch('/grants/all', {
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            }
+        });
         const grants = await response.json();
         setGrants(grants);
     }
@@ -34,8 +40,10 @@ function GrantsPage({ setGrant }) {
 
     // Load all grants
     useEffect(() => {
-        loadGrants();
-    }, []);
+        if (user) {
+            loadGrants();
+        }
+    }, [user]);
 
     // Display grants
     return (
