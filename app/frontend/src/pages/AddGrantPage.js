@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 export const AddGrantPage = () => {
     // Set all user input to empty string on initial render
@@ -11,15 +12,22 @@ export const AddGrantPage = () => {
     const [currStatus, setCurrStatus] = useState('Not submitted yet');
 
     const redirect = useNavigate();
+    const user = useAuthContext;
 
     // Add new grant to database using values from user input
     const addGrant = async () => {
+        if (!user) {
+            console.log('You must be logged in')
+            return
+        }
+
         const newGrant = { foundation, notes, date, ask, award, currStatus };
         const response = await fetch('/grants/create', {
             method: 'post',
             body: JSON.stringify(newGrant),
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
             },
         });
         if (response.status === 201) {
