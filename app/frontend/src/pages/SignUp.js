@@ -13,21 +13,26 @@ const Signup = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Sign up</h2>
-            <label>Email:</label>
-            <input
-                type="email"
-                onChange={e => setEmail(e.target.value)}
-            />
-            <label>Password:</label>
-            <input
-                type="password"
-                onChange={e => setPassword(e.target.value)}
-            />
-
-            <button disabled={isLoading}>Sign up</button>
-            {error && <div>{error}</div>}
+        <form id="form-div" className="border py-3 px-5" onSubmit={handleSubmit}>
+            <div className="mb-3 row">
+                <label>Email:</label>
+                <input
+                    type="email"
+                    onChange={e => setEmail(e.target.value)}
+                />
+            </div>
+            <div className="mb-3 row">
+                <label>Password:</label>
+                <input
+                    type="password"
+                    onChange={e => setPassword(e.target.value)}
+                />
+            </div>
+            
+            <div className="d-flex justify-content-center">
+                <button className="btn btn-success btn-lg" disabled={isLoading}>Sign up</button>
+                {error && <div>{error}</div>}
+            </div>
         </form>
     )
 }
