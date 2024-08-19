@@ -11,8 +11,14 @@ export const EditGrantPage = ({ grantToEdit }) => {
     const [currStatus, setCurrStatus] = useState(grantToEdit.currStatus);
 
     const redirect = useNavigate();
+    const user = useAuthContext()
 
     const editGrant = async () => {
+        if (!user) {
+            console.log('You must be logged in')
+            return
+        }
+        
         const response = await fetch(`/grants/edit/${grantToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({
@@ -23,7 +29,10 @@ export const EditGrantPage = ({ grantToEdit }) => {
                 award: award,
                 currStatus: currStatus
             }),
-            headers: {'Content-Type': 'application/json',},
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
+            },
         });
             if (response.status === 200) {
                 alert(`Grant successfully edited`);
