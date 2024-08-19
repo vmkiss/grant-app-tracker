@@ -12,7 +12,7 @@ export const AddGrantPage = () => {
     const [currStatus, setCurrStatus] = useState('Not submitted yet');
 
     const redirect = useNavigate();
-    const user = useAuthContext;
+    const user = useAuthContext();
 
     // Add new grant to database using values from user input
     const addGrant = async () => {
