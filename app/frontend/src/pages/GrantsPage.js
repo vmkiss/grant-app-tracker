@@ -37,14 +37,18 @@ function GrantsPage({ setGrant }) {
         }
 
         const response = await fetch(`/grants/delete/${_id}`, { 
-            method: 'DELETE'
-        }, {
-           headers: {
-            'Authorization': `Bearer ${user.token}`
-           }   
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            }
         });
+
         if (response.status === 200) {
-            const getResponse = await fetch('/grants/all');
+            const getResponse = await fetch('/grants/all', {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            });
             const grants = await getResponse.json();
             setGrants(grants);
         } else {
