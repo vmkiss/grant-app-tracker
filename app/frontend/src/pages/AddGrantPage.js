@@ -21,6 +21,8 @@ export const AddGrantPage = () => {
             return
         }
 
+        console.log(`User token: ${user.token}`)
+
         const newGrant = { foundation, notes, date, ask, award, currStatus };
         const response = await fetch('/grants/create', {
             method: 'post',
