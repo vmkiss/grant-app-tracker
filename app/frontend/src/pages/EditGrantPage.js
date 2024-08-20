@@ -50,7 +50,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
                 <h2>Edit grant details.</h2>
                 <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row px-5">
                         <label for="foundation">Foundation Name</label>
                         <input
                             type="text"
@@ -59,16 +59,17 @@ export const EditGrantPage = ({ grantToEdit }) => {
                             onChange={e => setFoundation(e.target.value)}
                             id="foundation" />
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row px-5">
                         <label for="notes">Notes</label>
-                        <input
-                            type="text"
+                        <textarea
+                            maxLength="250"
+                            rows="4"
                             placeholder="Enter notes about grant's area of focus or requirements"
                             value={notes}
                             onChange={e => setNotes(e.target.value)}
                             id="notes"/>
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row px-5">
                         <label for="date">Date Due</label>
                         <input
                             type="date"
@@ -77,7 +78,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
                             onChange={e => setDate(e.target.value)}
                             id="date"/>
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row px-5">
                         <label for="ask">Ask Amount</label>
                         <input
                             type="text"
@@ -86,7 +87,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
                             onChange={e => setAsk(e.target.value)}
                             id="ask"/>
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row px-5">
                         <label for="award">Award Amount</label>
                         <input
                             type="text"
@@ -95,7 +96,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
                             onChange={e => setAward(e.target.value)}
                             id="award"/>
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row px-5">
                         <label for="status">Current Status</label>
                         <select
                             value={currStatus}
