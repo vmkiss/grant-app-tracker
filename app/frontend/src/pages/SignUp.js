@@ -14,14 +14,14 @@ const Signup = () => {
 
     return (
         <form id="form-div" className="border py-3 px-5" onSubmit={handleSubmit}>
-            <div className="mb-3 row">
+            <div className="mb-3 row px-5">
                 <label>Email:</label>
                 <input
                     type="email"
                     onChange={e => setEmail(e.target.value)}
                 />
             </div>
-            <div className="mb-3 row">
+            <div className="mb-3 row px-5">
                 <label>Password:</label>
                 <input
                     type="password"

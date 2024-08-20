@@ -17,3 +17,7 @@ h2 {
 #form-div {
     background-color: #e8f7ea;
 }
+
+label {
+    font-weight: bold;
+}
