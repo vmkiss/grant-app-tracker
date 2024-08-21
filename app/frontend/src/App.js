@@ -20,7 +20,6 @@ function App() {
         <BrowserRouter>
             <Navbar />
             <header>
-                <h1 class="border border-3 mt-3 py-3 px-5">Grant Application Tracker</h1>
             </header>
 
             <main>
@@ -35,11 +34,6 @@ function App() {
                     </Routes>
                 </section>
             </main>
-
-            <footer>
-            <p><p>&copy; 2024 Veronika Kiss</p></p>
-          </footer>
-
         </BrowserRouter>
         </>
     );
