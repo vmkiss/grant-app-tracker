@@ -15,7 +15,7 @@ const Navbar = () => {
             <nav>
                 {user && (
                     <div>
-                        <img className="header-img" src="GrantHeader.png" alt="logo of hands holding heart with dollar sign"/>
+                        <img src="app/frontend/src/GrantHeader.png" alt="logo of hands holding heart with dollar sign"/>
                         <span>{user.email}</span>
                         <button class="btn btn-success btn-lg mx-2 mt-2" onClick={handleClick}>Log out</button>
                     </div>
