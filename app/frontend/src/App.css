@@ -29,3 +29,8 @@ label {
     top: 50%;
     transform: translate(-50%, -50%)
 }
+
+.header-img {
+    max-width: 20%;
+    max-height: 15%;
+}
