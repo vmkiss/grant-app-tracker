@@ -1,6 +1,7 @@
 {
   "name": "grant-app--tracker-frontend",
   "version": "2023",
+  "main": "src/index.js",
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
