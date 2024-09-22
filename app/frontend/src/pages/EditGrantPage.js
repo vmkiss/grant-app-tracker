@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from '../hooks/useAuthContext';
+import Navbar from '../components/Navbar';
 
 export const EditGrantPage = ({ grantToEdit }) => {
     //Set all user input to empty string on initial render
@@ -46,6 +47,7 @@ export const EditGrantPage = ({ grantToEdit }) => {
 
         return (
             <>
+            <Navbar />
             <div id="form-div" class="border py-3 px-5">
                 <h2>Edit grant details.</h2>
                 <form onSubmit={(e) => { e.preventDefault();}}>

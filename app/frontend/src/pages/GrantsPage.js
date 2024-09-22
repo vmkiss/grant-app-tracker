@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GrantList from '../components/GrantList';
+import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
 
@@ -64,6 +65,7 @@ function GrantsPage({ setGrant }) {
     // Display grants
     return (
         <>
+            <Navbar />
             <Link to="/create">
                 <button type="button" class="btn btn-success btn-lg mb-3">Add Grant</button>
             </Link>
