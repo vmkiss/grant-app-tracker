@@ -22,8 +22,6 @@ label {
     font-weight: bold;
 }
 
-
-
 .header-img {
     max-width: 20%;
     max-height: 15%;
@@ -31,4 +29,8 @@ label {
 
 .featured-img {
     width: 500px;
+}
+
+#main-nav {
+    background-color: #bcfbc5;
 }

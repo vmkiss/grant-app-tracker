@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogOut'
 import { useAuthContext } from '../hooks/useAuthContext'
 
@@ -11,10 +10,10 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="main-nav" className="navbar navbar-expand-lg my-3 pb-3">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    <img src="GrantHeader.png" alt="Logo" width="250" height="100" class="d-inline-block align-text-top"/>
+                    <img src="GrantHeader.png" alt="Logo" width="250" height="50" class="d-inline-block align-text-top"/>
                 </a>
 
                 {user && (
