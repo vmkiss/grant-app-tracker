@@ -14,27 +14,21 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    <img src="https://via.placeholder.com/50" alt="Logo" width="40" height="40" class="d-inline-block align-text-top"/>
-                    MyLogo
+                    <img src="GrantHeader.png" alt="Logo" width="250" height="100" class="d-inline-block align-text-top"/>
                 </a>
 
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
+                {user && (
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <button class="btn btn-success btn-lg mx-2 mt-2">{user.email}</button>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">About</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Services</a>
+                        <button class="btn btn-success btn-lg mx-2 mt-2" onClick={handleClick}>Log out</button>
                     </li>
                     </ul>
                 </div>
+            )}
             </div>
         </nav>
     )
