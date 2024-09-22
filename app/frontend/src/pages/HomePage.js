@@ -49,7 +49,8 @@ export const HomePage = () => {
                                 {error && <div>{error}</div>}
                             </div>
                             <div>
-                                <p className="text-center">Don't have an account? Sign up.</p>
+                                <p className="text-center">Don't have an account?&nbsp;
+                                <Link to="/signup">Sign up.</Link></p>
                             </div>
                         </form>
                     </div>
