@@ -34,3 +34,7 @@ label {
     max-width: 20%;
     max-height: 15%;
 }
+
+.featured-img {
+    width: 250px;
+}
