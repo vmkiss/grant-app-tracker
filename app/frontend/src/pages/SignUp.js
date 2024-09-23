@@ -17,7 +17,7 @@ const Signup = () => {
 
     return (
         <div id="home-div" className="container d-flex justify-content-center align-items-center min-vh-100">
-            <div className="row border rounded-5 p-3 bg-white shadow box-area align-items-center">
+            <div id="login-signup-div" className="row border rounded-5 p-3 shadow box-area align-items-center">
                 <div className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column">
                     <div className="featured-img mb-3">
                         <img src="GrantTracker.png" className="img-fluid" alt="logo of hands holding heart with dollar sign"/>
