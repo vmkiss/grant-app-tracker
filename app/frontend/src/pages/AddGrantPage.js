@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 export const AddGrantPage = () => {
     // Set all user input to empty string on initial render
@@ -109,12 +110,20 @@ export const AddGrantPage = () => {
                     <div class="d-flex justify-content-center">
                         <label for="submit">
                         <button
-                            class="btn btn-success btn-lg"
+                            className="btn btn-success btn-lg me-3"
                             type="submit"
                             onClick={addGrant}
                             id="submit"
                         >Add grant</button>
                         </label>
+                       
+                        <Link to="/grants">
+                            <button 
+                                className="btn btn-dark btn-lg"
+                                type="cancel">
+                                Cancel
+                            </button>
+                        </Link>
                     </div>
                 </fieldset>
             </form>
