@@ -45,7 +45,7 @@ export const HomePage = () => {
                             </div>
 
                             <div className="d-flex flex-column align-items-center justify-content-center mb-3">
-                                <button className="btn btn-success btn-lg mb-3" disabled={isLoading}>Login</button>
+                                <button className="btn btn-success btn-lg" disabled={isLoading}>Login</button>
                                 {error && <div>{error}</div>}
                             </div>
                             <div>
