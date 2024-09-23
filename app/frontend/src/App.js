@@ -16,10 +16,6 @@ function App() {
     return (
         <>
         <BrowserRouter>
-           {/* <Navbar /> */}
-            <header>
-            </header>
-
             <main>
                 <section>
                     <Routes>
